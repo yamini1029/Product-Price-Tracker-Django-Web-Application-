@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width">
+  <title>PRODUCT PRICE TRACKER | Welcome</title>
+     
+    </head>
+    <header style="background: #35424a; color: #ffffff; padding-top: 30px; min-height: 150px;">
+        <img style="position: 500px;float: left; width: 500px;" src="C:\DS\DJANGO\PRODUCTPRICETRACKER\users\templates\users\img.jpg" alt="logo">
+        <div style="color: #e7eff4; text-decoration:none; text-transform: uppercase; font: 30px/1.5 arial" class="container">
+          <div id="branding">
+            <h1 style="color: #fff;text-align: center; width: 80%; margin: auto; overflow: hidden;color: rgb(225, 202, 133);">PRODUCT PRICE TRACKER</h1>
+          </div>
+
+    <body style=" background: #35424a; color: white;">
+        <h1 style="text-align: center; 
+        font: 40px/1.5 arial; color: rgb(241, 247, 247);margin-top: 0%;"><b>REGISTER AN ACCOUNT TODAY</b></h1>
+ 
+        <form style="text-align: left;  font: 20px/1.5 arial; margin-top: 0%;" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <br>
+            <button style="margin-top: 2%; margin-left: 3%; padding: 10px 65px;" type="submit">submit</button>
+        </form>
+        <p class="w-message">Existing User?
+            <a class="a-submit" style="color: white;" href="{% url 'login' %}">Login</a>
+        </p>
+    </body>
+</html>
